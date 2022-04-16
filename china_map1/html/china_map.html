@@ -1,0 +1,243 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML is auto-generated from an M-file.
+To make changes, update the M-file and republish this document.
+      --><title>china_map</title><meta name="generator" content="MATLAB 7.9"><meta name="date" content="2012-06-05"><meta name="m-file" content="china_map"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">&#36733;&#20837;&#22320;&#22270;&#25968;&#25454;</a></li><li><a href="#3">&#20351;&#29992;importdata&#21521;&#23548;&#23548;&#20837;2011&#24180;&#20840;&#22269;31&#20010;&#30465;&#30340;&#20154;&#21475;&#25968;&#25454;</a></li><li><a href="#4">&#23450;&#20041;&#22320;&#22270;&#21442;&#25968;</a></li><li><a href="#5">&#26174;&#31034;&#22320;&#22270;</a></li><li><a href="#6">&#22270;&#30340;&#26631;&#27880;</a></li></ul></div><pre class="codeinput"><span class="comment">%-- &#20998;&#30465;&#20013;&#22269;&#22320;&#22270;&#22312;MATLAB&#20013;&#30340;&#30011;&#27861; --%</span>
+<span class="comment">% Author: gaospecial@gmail.com</span>
+<span class="comment">% Date: 2012-6-5 14:04:01</span>
+<span class="comment">% &#22320;&#22270;&#25968;&#25454;&#26469;&#28304;&#65306;&#22269;&#23478;&#22522;&#30784;&#22320;&#29702;&#20449;&#24687;&#31995;&#32479;&#32593;&#31449;</span>
+<span class="comment">% &#20154;&#21475;&#25968;&#25454;&#26469;&#28304;&#65306;&#22269;&#23478;&#32479;&#35745;&#24180;&#37492;2011&#29256;</span>
+</pre><h2>&#36733;&#20837;&#22320;&#22270;&#25968;&#25454;<a name="2"></a></h2><p>&#36733;&#20837;&#21508;&#30465;&#30340;&#22810;&#36793;&#24418;&#25968;&#25454;</p><pre class="codeinput">sheng=shaperead(<span class="string">'maps/bou2_4p.shp'</span>, <span class="string">'UseGeoCoords'</span>, true);<span class="comment">% &#30465;</span>
+<span class="comment">% &#26816;&#26597;&#25968;&#25454;&#21457;&#29616;&#20013;&#21320;&#21517;&#31216;&#20026;&#20081;&#30721;&#65292;&#21487;&#33021;&#26159;&#30001;&#20110;&#23383;&#31526;&#32534;&#30721;&#24341;&#36215;&#30340;&#65292;&#38656;&#35201;&#32416;&#27491;&#25991;&#20214;&#23548;&#20837;&#26102;&#20986;&#29616;&#30340;&#20081;&#30721;</span>
+<span class="comment">% &#20013;&#25991;&#21517;&#31216;&#35760;&#24405;&#22312;&#30456;&#24212;&#30340;dbf&#25991;&#20214;&#20013;&#65292;&#21487;&#20197;&#20351;&#29992;Excel&#25171;&#24320;&#65292;&#24182;&#19988;&#19981;&#20250;&#20986;&#29616;&#20081;&#30721;&#65292;&#25130;&#21462;&#20854;&#20013;&#30340;&#20013;&#25991;&#20445;&#23384;&#20026;&#25991;&#26412;&#25991;&#20214;</span>
+<span class="comment">% &#28982;&#21518;&#22312;&#23548;&#20837;&#24037;&#20316;&#21306;&#65292;&#24182;&#23558;&#20854;&#20445;&#23384;&#20026;*.mat&#26684;&#24335;&#25991;&#20214;&#65292;&#38543;&#29992;&#38543;&#21462;&#12290;</span>
+<span class="comment">% &#20381;&#27425;&#26367;&#25442;sheng&#25968;&#25454;&#20013;&#30340;&#20081;&#30721;&#12304;&#31639;&#26159;&#21464;&#36890;&#20043;&#27861;&#65292;&#26377;&#35841;&#30693;&#36947;&#26356;&#22909;&#30340;&#26041;&#27861;&#19968;&#23450;&#21578;&#35785;&#25105;&#21734;&#12305;</span>
+load <span class="string">chinese_name.mat</span> <span class="comment">% &#30465;&#65292;&#30465;&#20250;&#65292;&#20027;&#35201;&#22478;&#24066;&#30340;&#27491;&#30830;&#20013;&#25991;</span>
+<span class="keyword">for</span> i=1:length(sheng)
+    sheng(i).NAME=sheng_chinese_name{i}; <span class="comment">% &#32416;&#27491;&#20013;&#25991;&#26174;&#31034;&#38169;&#35823;</span>
+<span class="keyword">end</span>
+unique(sheng_chinese_name) <span class="comment">% &#21547;&#26377;34&#20010;&#30465;&#65288;&#30452;&#36758;&#24066;&#65289;&#30340;&#25968;&#25454;</span>
+length(sheng) <span class="comment">% &#20849;&#20998;&#20026;925&#20010;&#21306;&#22359;</span>
+</pre><pre class="codeoutput">
+ans = 
+
+    '&#19978;&#28023;&#24066;'
+    '&#20113;&#21335;&#30465;'
+    '&#20869;&#33945;&#21476;&#33258;&#27835;&#21306;'
+    '&#21271;&#20140;&#24066;'
+    '&#21488;&#28286;&#30465;'
+    '&#21513;&#26519;&#30465;'
+    '&#22235;&#24029;&#30465;'
+    '&#22825;&#27941;&#24066;'
+    '&#23425;&#22799;&#22238;&#26063;&#33258;&#27835;&#21306;'
+    '&#23433;&#24509;&#30465;'
+    '&#23665;&#19996;&#30465;'
+    '&#23665;&#35199;&#30465;'
+    '&#24191;&#19996;&#30465;'
+    '&#24191;&#35199;&#22766;&#26063;&#33258;&#27835;&#21306;'
+    '&#26032;&#30086;&#32500;&#21566;&#23572;&#33258;&#27835;&#21306;'
+    '&#27743;&#33487;&#30465;'
+    '&#27743;&#35199;&#30465;'
+    '&#27827;&#21271;&#30465;'
+    '&#27827;&#21335;&#30465;'
+    '&#27993;&#27743;&#30465;'
+    '&#28023;&#21335;&#30465;'
+    '&#28246;&#21271;&#30465;'
+    '&#28246;&#21335;&#30465;'
+    '&#29976;&#32899;&#30465;'
+    '&#31119;&#24314;&#30465;'
+    '&#31354;'
+    '&#35199;&#34255;&#33258;&#27835;&#21306;'
+    '&#36149;&#24030;&#30465;'
+    '&#36797;&#23425;&#30465;'
+    '&#37325;&#24198;&#24066;'
+    '&#38485;&#35199;&#30465;'
+    '&#38738;&#28023;&#30465;'
+    '&#39321;&#28207;&#29305;&#21035;&#34892;&#25919;&#21306;'
+    '&#40657;&#40857;&#27743;&#30465;'
+
+
+ans =
+
+   925
+
+</pre><h2>&#20351;&#29992;importdata&#21521;&#23548;&#23548;&#20837;2011&#24180;&#20840;&#22269;31&#20010;&#30465;&#30340;&#20154;&#21475;&#25968;&#25454;<a name="3"></a></h2><p>data&#20026;&#20154;&#21475;&#25968;&#30446; textdata&#20026;&#30465;&#21517;&#31216;</p><pre class="codeinput">d=importdata(<span class="string">'renkou.txt'</span>);
+data=d.data; <span class="comment">% &#20154;&#21475;&#25968;&#30446;</span>
+textdata=d.textdata; <span class="comment">% &#30456;&#23545;&#24212;&#30340;&#30465;&#30340;&#21517;&#31216;</span>
+</pre><h2>&#23450;&#20041;&#22320;&#22270;&#21442;&#25968;<a name="4"></a></h2><p>&#38024;&#23545;&#19981;&#21516;&#30465;&#20221;&#65292;&#20998;&#21035;&#35774;&#32622;&#19981;&#21516;&#30340;&#39068;&#33394;&#65288;FaceColor&#65289; &#23450;&#20041;&#39068;&#33394;</p><pre class="codeinput">k=128;
+mycolormap=summer(k);
+<span class="comment">% &#29983;&#25104;&#19981;&#21516;&#21306;&#22495;&#25353;&#22823;&#23567;&#30340;&#39068;&#33394;&#65292;&#25353;&#29031;&#20154;&#21475;&#25968;&#30446;&#22810;&#23569;&#20998;&#21035;&#25351;&#23450;&#19981;&#21516;&#30340;&#39068;&#33394;</span>
+<span class="comment">% &#20154;&#21475;&#36234;&#22810;&#65292;&#39068;&#33394;&#36234;&#31361;&#20986;</span>
+geoname={sheng.NAME}';
+max_data = max(data);
+n=length(data);
+mysymbolspec=cell(1,n); <span class="comment">% &#39044;&#23450;&#20041;&#21464;&#37327;&#21487;&#20197;&#21152;&#24555;&#22788;&#29702;&#36895;&#24230;</span>
+<span class="keyword">for</span> i=1:n
+    count=data(i);
+    mycoloridx=floor( k * count / max_data );
+    mycoloridx(mycoloridx&lt;1)=1;
+    myprovince=textdata{i};
+    geoidx=strmatch(myprovince, geoname);
+    <span class="keyword">if</span> numel(geoidx) &gt; 0
+        province_name=geoname( geoidx(1) );
+        mysymbolspec{i} = {<span class="string">'NAME'</span>, char(province_name), <span class="string">'FaceColor'</span>, mycolormap( mycoloridx, :) };
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><h2>&#26174;&#31034;&#22320;&#22270;<a name="5"></a></h2><pre class="codeinput">figure
+ax=worldmap(<span class="string">'china'</span>); <span class="comment">% &#20351;&#29992;worldmap&#30340;&#22352;&#26631;&#36724;&#20316;&#22270;</span>
+setm(ax,<span class="string">'grid'</span>,<span class="string">'off'</span>) <span class="comment">% &#20851;&#38381;grid</span>
+setm(ax,<span class="string">'frame'</span>,<span class="string">'off'</span>) <span class="comment">% &#20851;&#38381;&#36793;&#26694;</span>
+setm(ax,<span class="string">'parallellabel'</span>,<span class="string">'off'</span>) <span class="comment">% &#20851;&#38381;&#22352;&#26631;&#36724;&#26631;&#35760;</span>
+setm(ax,<span class="string">'meridianlabel'</span>,<span class="string">'off'</span>) <span class="comment">% &#20851;&#38381;&#22352;&#26631;&#36724;&#26631;&#35760;</span>
+
+<span class="comment">% &#26368;&#20851;&#38190;&#30340;&#20004;&#20010;&#35821;&#21477;</span>
+symbols=makesymbolspec(<span class="string">'Polygon'</span>,{<span class="string">'default'</span>,<span class="string">'FaceColor'</span>,[0.9 0.9 0.8],<span class="keyword">...</span>
+    <span class="string">'LineStyle'</span>,<span class="string">'--'</span>,<span class="string">'LineWidth'</span>,0.2,<span class="keyword">...</span>
+    <span class="string">'EdgeColor'</span>,[0.8 0.9 0.9]},<span class="keyword">...</span>
+    mysymbolspec{:}<span class="keyword">...</span>
+    );
+geoshow(sheng,<span class="string">'SymbolSpec'</span>,symbols); <span class="comment">% &#27492;&#22788;&#29992;mapshow&#25237;&#24433;&#20250;&#19981;&#27491;&#30830;</span>
+</pre><img vspace="5" hspace="5" src="china_map_01.png" alt=""> <h2>&#22270;&#30340;&#26631;&#27880;<a name="6"></a></h2><p>&#22312;&#22270;&#20687;&#21491;&#20391;&#26174;&#31034;bar</p><pre class="codeinput">colormap(summer(k))
+hcb=colorbar(<span class="string">'EastOutside'</span>);
+step=round(max_data/11);
+set(hcb,<span class="string">'YTick'</span>,(0:.1:1))
+set(hcb,<span class="string">'YTickLabel'</span>,num2cell(0:step:max_data))
+
+<span class="comment">% &#32473;&#22270;&#20687;&#21152;&#26631;&#39064;</span>
+title(<span class="string">'&#20013;&#22269;2011&#24180;&#21508;&#30465;&#20154;&#21475;&#25968;&#65288;&#19975;&#20154;&#65289;'</span>)
+</pre><img vspace="5" hspace="5" src="china_map_02.png" alt=""> <p class="footer"><br>
+      Published with MATLAB&reg; 7.9<br></p></div><!--
+##### SOURCE BEGIN #####
+%REPLACE_WITH_DASH_DASH 分省中国地图在MATLAB中的画法 REPLACE_WITH_DASH_DASH%
+% Author: gaospecial@gmail.com
+% Date: 2012-6-5 14:04:01
+% 地图数据来源：国家基础地理信息系统网站
+% 人口数据来源：国家统计年鉴2011版
+%% 载入地图数据
+% 载入各省的多边形数据
+sheng=shaperead('maps/bou2_4p.shp', 'UseGeoCoords', true);% 省
+% 检查数据发现中午名称为乱码，可能是由于字符编码引起的，需要纠正文件导入时出现的乱码
+% 中文名称记录在相应的dbf文件中，可以使用Excel打开，并且不会出现乱码，截取其中的中文保存为文本文件
+% 然后在导入工作区，并将其保存为*.mat格式文件，随用随取。
+% 依次替换sheng数据中的乱码【算是变通之法，有谁知道更好的方法一定告诉我哦】
+load chinese_name.mat % 省，省会，主要城市的正确中文
+for i=1:length(sheng)
+    sheng(i).NAME=sheng_chinese_name{i}; % 纠正中文显示错误
+end
+unique(sheng_chinese_name) % 含有34个省（直辖市）的数据
+length(sheng) % 共分为925个区块
+%% 使用importdata向导导入2011年全国31个省的人口数据
+% data为人口数目 textdata为省名称
+d=importdata('renkou.txt');
+data=d.data; % 人口数目
+textdata=d.textdata; % 相对应的省的名称
+%% 定义地图参数
+% 针对不同省份，分别设置不同的颜色（FaceColor）
+% 定义颜色
+k=128;  
+mycolormap=summer(k);
+% 生成不同区域按大小的颜色，按照人口数目多少分别指定不同的颜色
+% 人口越多，颜色越突出
+geoname={sheng.NAME}';
+max_data = max(data);
+n=length(data);
+mysymbolspec=cell(1,n); % 预定义变量可以加快处理速度
+for i=1:n
+    count=data(i);
+    mycoloridx=floor( k * count / max_data );
+    mycoloridx(mycoloridx<1)=1;
+    myprovince=textdata{i};
+    geoidx=strmatch(myprovince, geoname);
+    if numel(geoidx) > 0
+        province_name=geoname( geoidx(1) );
+        mysymbolspec{i} = {'NAME', char(province_name), 'FaceColor', mycolormap( mycoloridx, :) };
+    end
+end
+%% 显示地图
+figure
+ax=worldmap('china'); % 使用worldmap的坐标轴作图
+setm(ax,'grid','off') % 关闭grid
+setm(ax,'frame','off') % 关闭边框
+setm(ax,'parallellabel','off') % 关闭坐标轴标记
+setm(ax,'meridianlabel','off') % 关闭坐标轴标记
+
+% 最关键的两个语句
+symbols=makesymbolspec('Polygon',{'default','FaceColor',[0.9 0.9 0.8],...
+    'LineStyle','REPLACE_WITH_DASH_DASH','LineWidth',0.2,...
+    'EdgeColor',[0.8 0.9 0.9]},...
+    mysymbolspec{:}...
+    );
+geoshow(sheng,'SymbolSpec',symbols); % 此处用mapshow投影会不正确
+
+%% 图的标注
+% 在图像右侧显示bar
+colormap(summer(k))
+hcb=colorbar('EastOutside');
+step=round(max_data/11);
+set(hcb,'YTick',(0:.1:1))
+set(hcb,'YTickLabel',num2cell(0:step:max_data))
+
+% 给图像加标题
+title('中国2011年各省人口数（万人）')
+##### SOURCE END #####
+--></body></html>

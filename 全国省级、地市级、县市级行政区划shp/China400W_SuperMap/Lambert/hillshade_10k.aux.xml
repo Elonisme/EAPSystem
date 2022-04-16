@@ -1,0 +1,236 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>hillshade_10k</Description>
+    <NoDataValue>0.00000000000000E+000</NoDataValue>
+    <Histograms>
+      <HistItem>
+        <HistMin>-0.5</HistMin>
+        <HistMax>201.5</HistMax>
+        <BucketCount>202</BucketCount>
+        <IncludeOutOfRange>1</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|1|3|2|3|2|3|8|7|5|17|25|28|36|63|64|110|163|196|282|476|583|906|1457|2446|4255|7481|15083|31317|10896|5392|2925|1698|977|660|395|275|170|126|93|56|36|29|21|14|8|4|0|1|2</HistCounts>
+      </HistItem>
+    </Histograms>
+    <GDALRasterAttributeTable>
+      <FieldDefn index="0">
+        <Name>BinValues</Name>
+        <Type>1</Type>
+        <Usage>5</Usage>
+      </FieldDefn>
+      <FieldDefn index="1">
+        <Name>Histogram</Name>
+        <Type>1</Type>
+        <Usage>0</Usage>
+      </FieldDefn>
+      <Row index="0">
+        <F>153</F>
+        <F>1</F>
+      </Row>
+      <Row index="1">
+        <F>154</F>
+        <F>3</F>
+      </Row>
+      <Row index="2">
+        <F>155</F>
+        <F>2</F>
+      </Row>
+      <Row index="3">
+        <F>156</F>
+        <F>3</F>
+      </Row>
+      <Row index="4">
+        <F>157</F>
+        <F>2</F>
+      </Row>
+      <Row index="5">
+        <F>158</F>
+        <F>3</F>
+      </Row>
+      <Row index="6">
+        <F>159</F>
+        <F>8</F>
+      </Row>
+      <Row index="7">
+        <F>160</F>
+        <F>7</F>
+      </Row>
+      <Row index="8">
+        <F>161</F>
+        <F>5</F>
+      </Row>
+      <Row index="9">
+        <F>162</F>
+        <F>17</F>
+      </Row>
+      <Row index="10">
+        <F>163</F>
+        <F>25</F>
+      </Row>
+      <Row index="11">
+        <F>164</F>
+        <F>28</F>
+      </Row>
+      <Row index="12">
+        <F>165</F>
+        <F>36</F>
+      </Row>
+      <Row index="13">
+        <F>166</F>
+        <F>63</F>
+      </Row>
+      <Row index="14">
+        <F>167</F>
+        <F>64</F>
+      </Row>
+      <Row index="15">
+        <F>168</F>
+        <F>110</F>
+      </Row>
+      <Row index="16">
+        <F>169</F>
+        <F>163</F>
+      </Row>
+      <Row index="17">
+        <F>170</F>
+        <F>196</F>
+      </Row>
+      <Row index="18">
+        <F>171</F>
+        <F>282</F>
+      </Row>
+      <Row index="19">
+        <F>172</F>
+        <F>476</F>
+      </Row>
+      <Row index="20">
+        <F>173</F>
+        <F>583</F>
+      </Row>
+      <Row index="21">
+        <F>174</F>
+        <F>906</F>
+      </Row>
+      <Row index="22">
+        <F>175</F>
+        <F>1457</F>
+      </Row>
+      <Row index="23">
+        <F>176</F>
+        <F>2446</F>
+      </Row>
+      <Row index="24">
+        <F>177</F>
+        <F>4255</F>
+      </Row>
+      <Row index="25">
+        <F>178</F>
+        <F>7481</F>
+      </Row>
+      <Row index="26">
+        <F>179</F>
+        <F>15083</F>
+      </Row>
+      <Row index="27">
+        <F>180</F>
+        <F>31317</F>
+      </Row>
+      <Row index="28">
+        <F>181</F>
+        <F>10896</F>
+      </Row>
+      <Row index="29">
+        <F>182</F>
+        <F>5392</F>
+      </Row>
+      <Row index="30">
+        <F>183</F>
+        <F>2925</F>
+      </Row>
+      <Row index="31">
+        <F>184</F>
+        <F>1698</F>
+      </Row>
+      <Row index="32">
+        <F>185</F>
+        <F>977</F>
+      </Row>
+      <Row index="33">
+        <F>186</F>
+        <F>660</F>
+      </Row>
+      <Row index="34">
+        <F>187</F>
+        <F>395</F>
+      </Row>
+      <Row index="35">
+        <F>188</F>
+        <F>275</F>
+      </Row>
+      <Row index="36">
+        <F>189</F>
+        <F>170</F>
+      </Row>
+      <Row index="37">
+        <F>190</F>
+        <F>126</F>
+      </Row>
+      <Row index="38">
+        <F>191</F>
+        <F>93</F>
+      </Row>
+      <Row index="39">
+        <F>192</F>
+        <F>56</F>
+      </Row>
+      <Row index="40">
+        <F>193</F>
+        <F>36</F>
+      </Row>
+      <Row index="41">
+        <F>194</F>
+        <F>29</F>
+      </Row>
+      <Row index="42">
+        <F>195</F>
+        <F>21</F>
+      </Row>
+      <Row index="43">
+        <F>196</F>
+        <F>14</F>
+      </Row>
+      <Row index="44">
+        <F>197</F>
+        <F>8</F>
+      </Row>
+      <Row index="45">
+        <F>198</F>
+        <F>4</F>
+      </Row>
+      <Row index="46">
+        <F>200</F>
+        <F>1</F>
+      </Row>
+      <Row index="47">
+        <F>201</F>
+        <F>2</F>
+      </Row>
+    </GDALRasterAttributeTable>
+    <Metadata>
+      <MDI key="STATISTICS_MINIMUM">153</MDI>
+      <MDI key="STATISTICS_MAXIMUM">201</MDI>
+      <MDI key="STATISTICS_MEAN">179.68733108108</MDI>
+      <MDI key="STATISTICS_MEDIAN">180</MDI>
+      <MDI key="STATISTICS_MODE">180</MDI>
+      <MDI key="STATISTICS_STDDEV">2.6617384761262</MDI>
+      <MDI key="STATISTICS_SKIPFACTORX">1</MDI>
+      <MDI key="STATISTICS_SKIPFACTORY">1</MDI>
+      <MDI key="STATISTICS_EXCLUDEDVALUES">0</MDI>
+      <MDI key="LAYER_TYPE">athematic</MDI>
+      <MDI key="STATISTICS_HISTOMIN">0</MDI>
+      <MDI key="STATISTICS_HISTOMAX">201</MDI>
+      <MDI key="STATISTICS_HISTONUMBINS">202</MDI>
+      <MDI key="STATISTICS_HISTOBINVALUES">0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|1|3|2|3|2|3|8|7|5|17|25|28|36|63|64|110|163|196|282|476|583|906|1457|2446|4255|7481|15083|31317|10896|5392|2925|1698|977|660|395|275|170|126|93|56|36|29|21|14|8|4|0|1|2|</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
